@@ -27,6 +27,33 @@ As a result 4 out of 8 cases has errors 4 in sum and 2 in carry
 
 # COMPRESSOR :
 
+# 4:2 Compressor Truth Table
+
+## Truth Table
+
+| A | B | C | D | Exact Sum | Exact Carry | Approximate Sum | Approximate Carry |
+|---|---|---|---|-----------|--------------|------------------|-------------------|
+| 0 | 0 | 0 | 0 |    0      |      0       |        0         |        0          |
+| 0 | 0 | 0 | 1 |    1      |      0       |        0         |        0          |
+| 0 | 0 | 1 | 0 |    1      |      0       |        0         |        0          |
+| 0 | 0 | 1 | 1 |    0      |      1       |        0         |        0          |
+| 0 | 1 | 0 | 0 |    1      |      0       |        0         |        0          |
+| 0 | 1 | 0 | 1 |    0      |      1       |        1         |        0          |
+| 0 | 1 | 1 | 0 |    1      |      1       |        1         |        0          |
+| 0 | 1 | 1 | 1 |    1      |      1       |        1         |        0          |
+| 1 | 0 | 0 | 0 |    1      |      0       |        0         |        0          |
+| 1 | 0 | 0 | 1 |    0      |      0       |        0         |        0          |
+| 1 | 0 | 1 | 0 |    0      |      0       |        1         |        1          |
+| 1 | 0 | 1 | 1 |    1      |      1       |        1         |        1          |
+| 1 | 1 | 0 | 0 |    0      |      0       |        1         |        1          |
+| 1 | 1 | 0 | 1 |    1      |      1       |        1         |        1          |
+| 1 | 1 | 1 | 0 |    1      |      1       |        1         |        1          |
+| 1 | 1 | 1 | 1 |    0      |      1       |        1         |        1          |
+
+Total errors in sum = 8
+
+Total errors in carry = 6
+
 compressor which is being  is a 4:2 compressor with 4 inputs and 2 outputs as shown below:
 
 ![Screenshot 2025-01-16 233431](https://github.com/user-attachments/assets/af2ccfd0-1e04-45bd-9e07-563fd9b61b05)
@@ -44,6 +71,11 @@ p a<sub> m,n</sub> = a<sub> m,n</sub>+ a<sub> n,m</sub>
 g a<sub> m,n</sub> =  a<sub> m,n</sub> ⋅ a<sub> n,m</sub>
 
 No change in a a<sub> m,m</sub> terms
+
+# FINAL SUMMATION
+
+![k](https://github.com/user-attachments/assets/9c861f82-3e8a-4b65-bceb-c61fd7f59c92)
+
 
 # BLOCK DIAGRAM:
 
